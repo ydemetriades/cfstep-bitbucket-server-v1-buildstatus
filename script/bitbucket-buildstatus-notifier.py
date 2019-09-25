@@ -2,11 +2,12 @@
 import os
 import requests
 
-repo_owner = os.getenv('CF_REPO_OWNER')
-repo_slug = os.getenv('CF_REPO_NAME')
-
-repo_auth_user = os.getenv('BB_BSN_REPO_AUTH_USER', repo_owner)
+repo_auth_user = os.getenv('BB_BSN_REPO_AUTH_USER')
 repo_auth_password = os.getenv('BB_BSN_REPO_AUTH_PASSWORD')
+
+if repo_auth_user is None:
+    print("Authentication User Environment Variable [BB_BSN_REPO_AUTH_USER] is not defined.")
+    exit(2)
 
 if repo_auth_password is None:
     print("Authentication Password Environment Variable [BB_BSN_REPO_AUTH_PASSWORD] is not defined.")
@@ -34,11 +35,8 @@ data = {
 }
 
 # Construct URL
-api_url = ('%(url)s/2.0/repositories/'
-           '%(owner)s/%(repo_slug)s/commit/%(revision)s/statuses/build'
+api_url = ('%(url)srest/build-status/1.0/commits/%(revision)s'
            % {'url': bb_url,
-              'owner': repo_owner,
-              'repo_slug': repo_slug,
               'revision': cf_revision})
 
 print('Sending request to:')

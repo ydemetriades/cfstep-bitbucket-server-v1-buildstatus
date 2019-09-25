@@ -18,7 +18,7 @@ Both, Codefresh step and docker image, are configurable through parameters in or
 |Name|Required|Description|Available Options|
 |----|--------|-----------|-----------------|
 |BB_BSN_URL|Yes|Bitbucket Server API Url|-|
-|BB_BSN_REPO_AUTH_USER|No|Bitbucket Server API Authorization Username|-|
+|BB_BSN_REPO_AUTH_USER|Yes|Bitbucket Server API Authorization Username|-|
 |BB_BSN_REPO_AUTH_PASSWORD|Yes|Bitbucket Server API Authorization Password|-|
 |CF_BUILD_STATUS|Yes|Build Status|`SUCCESSFUL` `FAILED` `INPROGRESS` `STOPPED`|
 
