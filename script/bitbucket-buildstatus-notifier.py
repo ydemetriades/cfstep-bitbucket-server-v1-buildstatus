@@ -35,7 +35,7 @@ data = {
 }
 
 # Construct URL
-api_url = ('%(url)srest/build-status/1.0/commits/%(revision)s'
+api_url = ('%(url)s/rest/build-status/1.0/commits/%(revision)s'
            % {'url': bb_url,
               'revision': cf_revision})
 
