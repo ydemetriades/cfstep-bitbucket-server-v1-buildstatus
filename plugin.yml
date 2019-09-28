@@ -1,5 +1,5 @@
 name: ydemetriades/bitbucket-server-v1-buildstatus
-image: ydemetriades/bitbucket-server-v1-buildstatus
+image: ydemetriades/cfstep-bitbucket-server-v1-buildstatus
 tag: 0.0.1
 version: 0.0.1
 description: Update BitBucket Commit Build Status
