@@ -2,11 +2,11 @@ kind: step-type
 version: '1.0'
 metadata:
   name: ydemetriades/bitbucket-server-v1-buildstatus
-  version: 0.0.3
+  version: 0.0.4
   isPublic: true
   description: Update Bitbucket Server [API v1.0] Commit Build Status
   sources:
-    - 'https://github.com/ydemetriades/codefresh-bitbucket-server-v1-buildstatus'
+    - 'https://github.com/ydemetriades/cfstep-bitbucket-server-v1-buildstatus'
   stage: incubating
   maintainers:
     - name: Yiannis Demetriades
@@ -17,7 +17,7 @@ metadata:
   tags: []
   icon:
     type: svg
-    url: https://cdn.jsdelivr.net/gh/ydemetriades/codefresh-bitbucket-server-v1-buildstatus/icon.svg
+    url: https://cdn.jsdelivr.net/gh/ydemetriades/cfstep-bitbucket-server-v1-buildstatus/icon.svg
     background: "#f4f4f4"
   examples:
     - description: bitbucket-server-v1-buildstatus-basic-example
